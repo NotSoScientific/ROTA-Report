@@ -1,0 +1,37 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \title{Bob \\\large Trevor}
+  \author{Oliver Strik - S3100693}
+  \date{January 1 1970}
+  \maketitle
+  %\includegraphics[width=0.5\textwidth]{images\RUGLOGO.eps}\\[0.5cm]
+\end{titlepage}
+
+\begin{abstract}
+\noindent\blindtext
+\end{abstract}
+\pagebreak\tableofcontents
+% Introduction
+\pagebreak\input{introduction/intro}
+% Sections
+\pagebreak\input{sections/design/design}
+%\pagebreak\input{section 2}
+
+% Conclusion
+%\pagebreak\input{conclusion}
+%\pagebreak\input{discussion}
+
+%\pagebreak\input{references}
+%\pagebreak\input{appendix}
+\end{document}
