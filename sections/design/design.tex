@@ -1,3 +1,22 @@
 \section{Design}
 \par
-\blindtext
+In order to build the actual car, we went on to select our hardware. We used the following:
+
+ - Arduino Uno
+ - Velleman Stepper Motor Controller
+ - Servo from the Arduino started kit
+ - Raspberry Pi B Model (v1.2)
+ - Generic Wifi USB Adapter
+ - 8GB Micro SD card
+ - RC car which would have otherwise been forgotten about
+ - Power bank with 2 USB ports to power the Arduino
+ - Jumper wires
+ - 9V block
+
+We then set to work. We configured the Raspberry Pi by loading Raspbian on it, but this proved to be flawed when we wanted to set up our own Wi-Fi network on the Pi. Therefor, we chose to switch to Arch Linux, and worked from there. We have written a C server, with which our app communicates (it listens on the network for a static IP address, hence our own wifi network).
+
+After we managed to get the wifi working, we set to work on the server. The server has been designed such that our app sends an array containing the position of our joysticks, sending a total of 5 indexes. The server takes this input from the app, and sends it via a serial connection to the Arduino, one index per data transfer. This is then read by the Arduino, which then controls the motor and servo (steering). 
+
+Then, we had to get the controller working. We wrote an Android app that has two joysticks, and sends an array of 5 bytes to our server. The array contains a control byte, two bytes, x and y, for the left joystick, and two, again x and y, for the right. The control byte can be used for an emergency stop for instance.
+
+Finally, it was a matter of assembling all components, and making the car self powered. This is where the power bank came in. We disassembled an old RC car, wired up the motor to our motor controller, placed all components on the body, hooked up the servo, and after some software adjustments, we were able to drive the car.
