@@ -1,20 +1,13 @@
-\section{Evaluation}
-par Throughout the development of ROTA there have been things that needed to be tested.
+\section{Tests and Results}
+\par Throughout the development of ROTA there have been things that needed to be tested.
 After all there are three devices that could fail. The first thing that was programmed was
 the app, after fixing many small issues that showed up throughout development, three major
-problems showed.  
+problems showed.
 \begin{enumerate}
   \item If the app is disconnected from the server, by loosing the wifi or something
-  similar, it would never reconnect. To fix this, the client initisation thread, was
-  extended to perpetually loop, if the client was not connected, it would try to reconnect it,
-  otherwise, it would send a update packet. This also helped limit the number of packets
-  being sent to the server as originally a packet would be sent every time the user
-  stimulated the touch screen, this helped prevent the arduino from becomming overloaded.
+  similar, it would never reconnect. %%??%%??%%??%%??%%??
   \item If the screen focus shifts, causing the app to leave fullscreen, it never reverts.
-  This does not impact useability, however it is annoying. This was fixed by giving the
-  Android imersive environment the sticky flag. Now, popups and dragging the system bar into
-  view does not resize the app as they are rendered 'over' the app. When they disapear
-  the app is still fullscreen.
+  This does not impact useability, however it is annoying.
   \item If the user leaves the app, Android will `suspend' it. This is great, however,
   it reaks havoc with the server connection. Very strange things can happen, the best
   you can hope for is that the app crashes, at worst, the app tries to reistablish the
