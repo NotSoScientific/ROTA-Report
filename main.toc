@@ -3,5 +3,8 @@
 \contentsline {section}{\numberline {2}Problem Analysis}{4}
 \contentsline {section}{\numberline {3}Design}{5}
 \contentsline {section}{\numberline {4}Program Code}{6}
-\contentsline {section}{\numberline {5}Test Results}{7}
-\contentsline {section}{\numberline {6}Evaluation}{8}
+\contentsline {subsection}{\numberline {4.1}The Controller}{6}
+\contentsline {subsection}{\numberline {4.2}The Server}{6}
+\contentsline {subsection}{\numberline {4.3}The Interpreter}{7}
+\contentsline {section}{\numberline {5}Tests and Results}{8}
+\contentsline {section}{\numberline {6}Evaluation}{9}
